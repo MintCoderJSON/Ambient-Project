@@ -33,7 +33,7 @@ header h1 {
 #titleMain:hover{
     transition: color 0.3s ease; 
     cursor: pointer; 
-    color:rgba(134, 235, 19, 0.267);
+    color:rgba(10, 123, 46, 0.267);
 
 }
 
