@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build and deploy
+      run: |
+        mkdir -p ./core
+        mv * ./core/
+        cd ./core
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git init
+        git remote add origin https://github.com/MintCoderJSON/Ambient-Project.git
+        git add .
+        git commit -m "Deploy to GitHub Pages"
+        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/MintCoderJSON/Ambient-Project.git" main:gh-pages
