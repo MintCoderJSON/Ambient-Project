@@ -102,7 +102,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -117,3 +117,43 @@ h2  {
 #realTitle{
     margin-top: 30px;
 }
+
+#Leaves, #Flocon, #Tundra{
+    margin-top: 40px;
+    margin-right: 240px;
+
+    font-size: 1.2rem;
+    color: #0c1d2c
+
+}
+
+#LeavesMp3, #FloconMp3, #TundraMp3 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #091855;
+    color: #150c63;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+#LeavesMp3:hover , #FloconMp3:hover, #TundraMp3:hover{
+    background-color: #23258b;
+    transform: scale(1.05);
+}
+
+#LeavesMp3:active, #FloconMp3:active, #TundraMp3:active {
+    background-color: #634ecb;
+    transform: scale(0.95);
+}
+
+#LeavesMp3.playing, #FloconMp3.playing, #TundraMp3.playing {
+    background-color: #165e6b;
+    color: #ffffff;
+}
+
+
